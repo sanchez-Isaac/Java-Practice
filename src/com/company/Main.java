@@ -1,34 +1,57 @@
 package com.company;
-import javax.swing.JOptionPane; //This allows the GUI input to be called
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-	// A simple Java GUI input
+    //Simple program
+        double x = 3.1416;
+        double y = 60.36;
 
-        //creates a variable name and asks for the input
-        String name = JOptionPane.showInputDialog("Enter your Name");
-        //Displays the input
-        JOptionPane.showMessageDialog(null, "Hello " + name);
+        // compare two numbers and assign the max number to a new variable
+        // The Math.max method does the work
+        double z = Math.max(x,y);
+        //print the result in the screen
+        System.out.println("the Max value between "+ x +" and "+ y +" = "+z);
 
-        //creates a variable age and asks for the input
-        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
-        //Displays the input
-        JOptionPane.showMessageDialog(null, "You are " + age + " Year old");
+        // determine de absolute number and assign the value to a new variable
+        // The Math.abs method does the work
+        double g = -23;
+        double t = Math.abs(g);
+        //print the result in the screen
+        System.out.println("the absolute value of "+ g +" is: "+ t);
 
-        double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height"));
-        //Displays the input
-        JOptionPane.showMessageDialog(null, "You are " + height +" tall");
+        // determine de square root of a number and assign the value to a new variable
+        // The Math.sqrt method does the work
+        double s = Math.sqrt(y);
+        //print the result in the screen
+        System.out.println("the square root of "+ y +" is: "+ s);
 
-        String ccn = JOptionPane.showInputDialog("Enter your Credit Card Number");
-        //Displays the input
-        JOptionPane.showMessageDialog(null, "Your Credit Card Number is: \n" + ccn);
+        // round a number and assign the value to a new variable
+        // The Math.sqrt method does the work
+        double h = Math.round(y);
+        double h2 = Math.ceil(y);
+        //print the result in the screen
+        System.out.println("the rounded down number of "+ y +" is: "+ h);
+        System.out.println("and the rounded up number of "+ y +" is: "+ h2);
 
-        JOptionPane.showMessageDialog(null,"This is your info: \n"
-                                     + "your name is: " + name + "\n"
-                                     + "your age is: " + age+ "\n"
-                                     + "your height is: " + height + "\n"
-                                     + "your CCN is: " + ccn);
+        System.out.println("");
+        System.out.println("");
+        System.out.println("A little project! - find the hypotenuse");
 
-        JOptionPane.showMessageDialog(null,"You are not supposed to give out your CCN " + name + "!!! 😑😑😑 \n");
+        double x1; // Line x
+        double y1; //Line y
+        double hypo; // Hypotenuse
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Side x: ");
+        x1 = scanner.nextDouble();
+        System.out.println("Enter Side y: ");
+        y1 = scanner.nextDouble();
+
+        hypo = Math.sqrt((x1*x1)+(y1*y1));
+        System.out.println("The hypotenuse is: "+ hypo);
+        scanner.close(); // always close the scanner
+
     }
 }
