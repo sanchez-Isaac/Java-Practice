@@ -14,11 +14,11 @@ public class Main {
      * get the tips.
      *****************************************************/
     public static void calcTotalPrice(double total){
-        System.out.println("$"+ String.format("%.2f", total)); //display the total
+        System.out.println(total); //display the total
 
         //Calculate the tips
         double tip = total * 0.10; // Calculate the 10% for the tips
-        System.out.println("10% of tips = $" + String.format("%.2f", tip)); //display the total
+        System.out.println("10% of tips = $" + tip); //display the total
         System.out.println("Grand total of = $" + String.format("%.2f", tip + total)); //display the total
 
     }
@@ -69,7 +69,7 @@ public class Main {
                     System.out.println("You Got Soda, Your current total is: $" + String.format("%.2f", total));
                     break;
                 case 5:
-                    System.out.println("Your order has finished, Your current total is: ");
+                    System.out.println("Your order has finished, Your current total is: $");
                     cont = false; //Stop the loop
                     break;
             }
